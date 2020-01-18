@@ -24,4 +24,6 @@ String format(float x){
 }
 
 //it feels a bit much to write a function for a perfectly good function as nf(). 
-//Perhaps if I named it formatToOneDigit
+//Perhaps if I named it formatToOneDigit it would add something, but as is
+//it doesn't really. Although, now I think about it, this might be to teach
+//me the first beginnings return;
