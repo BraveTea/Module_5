@@ -17,7 +17,7 @@ void drawSlider(float x, float y, float sliderWidth, float sliderHeight,
 int determinePosition(float x, float sliderWidth, int numberOfPositions){
   
   float barWidth = sliderWidth/numberOfPositions;
- 
+   
   if (mouseX < x){
     return 0;
   } 
