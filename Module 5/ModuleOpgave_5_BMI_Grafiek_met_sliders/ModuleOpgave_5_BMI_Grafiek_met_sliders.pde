@@ -1,5 +1,38 @@
 //ModuleOpgave_5_BMI_Grafiek_met_sliders
 
+int sliderPosition;
+int numberOfSliderPositions;
+final float sliderX = 70;
+final float sliderWidth = 300;
+final float sliderHeight = 50;
+
+void setup(){
+  size(800,800);
+}
+
+void draw(){
+  background(0);
+  sliderForHeight();
+  sliderForWeight();
+}
+
+void sliderForHeight(){
+  final float sliderY = 100;
+  numberOfSliderPositions = 20;
+  sliderPosition = determinePosition(sliderX, sliderWidth, numberOfSliderPositions);
+  drawSlider(sliderX, sliderY, sliderWidth, sliderHeight, sliderPosition, numberOfSliderPositions);
+  text(sliderPosition, sliderX, sliderY + sliderHeight + 25);
+}
+
+void sliderForWeight(){
+  final float sliderY = 250;
+  numberOfSliderPositions = 50;
+  sliderPosition = determinePosition(sliderX, sliderWidth, numberOfSliderPositions);
+  drawSlider(sliderX, sliderY, sliderWidth, sliderHeight, sliderPosition, numberOfSliderPositions);
+  text(sliderPosition, sliderX, sliderY + sliderHeight + 25);
+}
+
+
 /* 
 NEXT time
 

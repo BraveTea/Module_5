@@ -1,4 +1,6 @@
 //prereq position < numberOfPositions && position >= 0
+
+
 void drawSlider(float x, float y, float sliderWidth, float sliderHeight, 
                     int position, int numberOfPositions) {
                       
