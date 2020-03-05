@@ -1,7 +1,7 @@
 //ModuleOpgave_5_BMI_Grafiek_met_sliders
 
-import controlP5.*;
-ControlP5 theControl;
+//import controlP5.*;
+//ControlP5 theControl;
 
 int sliderPositionHeight = 1;
 int sliderPositionWeight = 1;
@@ -14,16 +14,20 @@ final float sliderHeight = 50;
 void setup() {
   size(800, 800);
   smooth();
-  theControl = new ControlP5(this);
-  createNumberBoxes(theControl);
-}
+ // theControl = new ControlP5(this);
+  //createNumberBoxes(theControl);
+} //<>//
 
 void draw() {
-  background(0);
-  sliderForHeight();
-  sliderForWeight();
-  float scale_factor = height/2 / 33;
-  float BMI = sliderPositionWeight / ((sliderPositionHeight/10)*(sliderPositionHeight/10));
+  background(0); //<>//
+  sliderForHeight(); //<>//
+  sliderForWeight(); //<>//
+  float scale_factor = height/2 / 33; //<>//
+  if (sliderPositionWeight < 1 || sliderPositionHeight < 1){ //getypt om wat te proberen --> werkt wanneer op line 30 geen /10 staat, anders zelfde probleem
+    sliderPositionWeight = 1;
+    sliderPositionHeight = 1;
+  }
+  float BMI = sliderPositionWeight / ((sliderPositionHeight/10)*(sliderPositionHeight/10)); //<>//
   //float BMI =  leesGewicht()/(sq(leesLengte()/100));
   scalingBG(scale_factor);
   drawBMIbar(scale_factor, BMI);
@@ -31,7 +35,7 @@ void draw() {
   println(BMI);
   println("lengte:" + sliderPositionHeight);
   println("gewicht: " + sliderPositionWeight);
-}
+} //<>//
 
 void sliderForHeight() {
   final float sliderY = 150;
